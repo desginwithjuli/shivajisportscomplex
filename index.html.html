@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shiva Ji Sports Complex</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#0f4c81',secondary:'#e63946'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://readdy.ai/api/search-image?query=professional%20sports%20complex%20with%20various%20sports%20activities%20like%20yoga%2C%20karate%2C%20table%20tennis%20visible%20in%20a%20modern%20facility%20with%20blue%20and%20white%20color%20scheme%2C%20bright%20lighting%2C%20motivational%20posters%20on%20walls%2C%20high-quality%20equipment%2C%20people%20of%20different%20ages%20exercising%2C%20natural%20light%20coming%20through%20large%20windows&width=1920&height=1080&seq=1&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.5) 100%);
+        }
+        input[type="checkbox"] {
+            appearance: none;
+            width: 1.25rem;
+            height: 1.25rem;
+            border: 2px solid #0f4c81;
+            border-radius: 4px;
+            position: relative;
+        }
+        input[type="checkbox"]:checked::before {
+            content: "";
+            position: absolute;
+            width: 0.75rem;
+            height: 0.75rem;
+            background-color: #0f4c81;
+            border-radius: 2px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .vision-mission {
+            background-image: url('https://readdy.ai/api/search-image?query=inspiring%20sports%20background%20with%20athletes%20in%20silhouette%20against%20sunset%2C%20showing%20determination%20and%20achievement%2C%20blurred%20motion%20effect%2C%20motivational%20atmosphere%2C%20soft%20lighting%2C%20professional%20sports%20equipment%20visible%20in%20background&width=1920&height=600&seq=2&orientation=landscape');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 flex items-center justify-center text-primary">
+                    <i class="ri-sword-fill ri-2x"></i>
+                </div>
+                <h1 class="text-2xl font-bold text-primary">Shiva Ji Sports Complex</h1>
+            </div>
+            
+            <nav class="hidden lg:flex items-center space-x-6">
+                <a href="#home" class="text-gray-800 hover:text-primary font-medium">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-primary font-medium">About</a>
+                <a href="#activities" class="text-gray-800 hover:text-primary font-medium">Activities</a>
+                <a href="#team" class="text-gray-800 hover:text-primary font-medium">Team</a>
+                <a href="#gallery" class="text-gray-800 hover:text-primary font-medium">Gallery</a>
+                <a href="#vision" class="text-gray-800 hover:text-primary font-medium">Vision & Mission</a>
+                <a href="#contact" class="text-gray-800 hover:text-primary font-medium">Contact</a>
+            </nav>
+            
+            <div class="lg:hidden w-10 h-10 flex items-center justify-center">
+                <button id="mobile-menu-button" class="text-gray-800">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-md">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-800 hover:text-primary font-medium py-2">Home</a>
+                <a href="#about" class="text-gray-800 hover:text-primary font-medium py-2">About</a>
+                <a href="#activities" class="text-gray-800 hover:text-primary font-medium py-2">Activities</a>
+                <a href="#team" class="text-gray-800 hover:text-primary font-medium py-2">Team</a>
+                <a href="#gallery" class="text-gray-800 hover:text-primary font-medium py-2">Gallery</a>
+                <a href="#vision" class="text-gray-800 hover:text-primary font-medium py-2">Vision & Mission</a>
+                <a href="#contact" class="text-gray-800 hover:text-primary font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section relative">
+        <div class="hero-overlay w-full min-h-[600px] flex items-center">
+            <div class="container mx-auto px-4 py-16 md:py-24 flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 z-10">
+                    <div class="absolute top-4 right-4 md:top-8 md:right-8">
+                        <div class="bg-white p-2 rounded-lg shadow-md">
+                            <span class="text-primary font-bold">FIT INDIA</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-4">Shiva Ji Sports Complex</h1>
+                    <p class="text-gray-700 mb-6 max-w-2xl">
+                        <i class="ri-map-pin-line text-primary"></i> Gaur Enclave C-24 B, Shalimar Garden, Ext. 2, Near Shiv Chowk, Bata Show Room, Sahibabad, Ghaziabad (U.P.) 201005
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="tel:7840086263" class="bg-primary text-white px-6 py-3 rounded-button font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 transition-all whitespace-nowrap">
+                            <i class="ri-phone-line"></i> Registration Open - Call Now
+                        </a>
+                        <div class="flex flex-col">
+                            <a href="tel:7840086263" class="text-primary font-bold hover:underline">7840086263</a>
+                            <a href="tel:8802145193" class="text-primary font-bold hover:underline">8802145193</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Activities Section -->
+    <section id="activities" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Our Activities</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover a wide range of sports and wellness activities for all age groups at our state-of-the-art complex.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Activity 1 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=yoga%20class%20with%20people%20of%20different%20ages%20practicing%20in%20a%20bright%20studio%20with%20wooden%20floors%2C%20mats%20arranged%20neatly%2C%20instructor%20guiding%20poses%2C%20peaceful%20atmosphere&width=400&height=300&seq=3&orientation=landscape" alt="Yoga" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Yoga</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 2 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=dance%20class%20with%20instructor%20teaching%20choreography%20to%20students%20in%20a%20mirrored%20studio%2C%20energetic%20atmosphere%2C%20variety%20of%20ages%20learning%20dance%20moves&width=400&height=300&seq=4&orientation=landscape" alt="Dance" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Dance</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 3 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=kabaddi%20players%20in%20action%20on%20indoor%20court%2C%20team%20sport%20training%2C%20coach%20giving%20instructions%2C%20players%20in%20sports%20uniforms&width=400&height=300&seq=5&orientation=landscape" alt="Kabaddi" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Kabaddi</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 4 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=karate%20class%20with%20students%20in%20white%20uniforms%20practicing%20moves%2C%20instructor%20demonstrating%20technique%2C%20students%20of%20different%20belt%20levels%20training%20together&width=400&height=300&seq=6&orientation=landscape" alt="Karate" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Karate</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 5 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=chess%20players%20of%20different%20ages%20concentrating%20on%20chess%20boards%2C%20tournament-style%20setup%2C%20strategic%20gameplay%2C%20coach%20observing%20matches&width=400&height=300&seq=7&orientation=landscape" alt="Chess" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Chess</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 6 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=table%20tennis%20players%20practicing%20with%20coach%2C%20multiple%20tables%20with%20players%20rallying%2C%20focused%20training%20session%2C%20proper%20equipment%20and%20lighting&width=400&height=300&seq=8&orientation=landscape" alt="Table Tennis" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Table Tennis</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 7 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=boxing%20training%20with%20coach%20and%20students%2C%20punching%20bags%2C%20ring%20practice%2C%20proper%20boxing%20gloves%20and%20equipment%2C%20focused%20training&width=400&height=300&seq=9&orientation=landscape" alt="Boxing" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Boxing</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 8 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=zumba%20class%20with%20energetic%20instructor%20leading%20group%2C%20colorful%20workout%20clothes%2C%20dance-based%20fitness%2C%20participants%20following%20choreography&width=400&height=300&seq=10&orientation=landscape" alt="Zumba" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Zumba</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 9 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=arts%20and%20crafts%20class%20with%20children%20and%20instructor%2C%20creative%20projects%2C%20painting%20supplies%2C%20colorful%20artwork%20displayed%2C%20organized%20craft%20tables&width=400&height=300&seq=11&orientation=landscape" alt="Arts & Craft" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Arts & Craft</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 10 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=martial%20arts%20training%20with%20instructor%20demonstrating%20techniques%2C%20students%20practicing%20in%20pairs%2C%20proper%20form%20and%20discipline%2C%20various%20age%20groups&width=400&height=300&seq=12&orientation=landscape" alt="Martial Arts" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Martial Arts</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 11 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=physiotherapy%20session%20with%20therapist%20working%20with%20patient%2C%20rehabilitation%20equipment%2C%20professional%20treatment%20room%2C%20medical%20exercise&width=400&height=300&seq=13&orientation=landscape" alt="Physiotherapy" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Physiotherapy</h3>
+                    </div>
+                </div>
+                
+                <!-- Activity 12 -->
+                <div class="activity-card bg-white rounded shadow-md overflow-hidden transition-all duration-300">
+                    <div class="h-40 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=fitness%20training%20in%20modern%20gym%2C%20personal%20trainer%20with%20client%2C%20weight%20equipment%2C%20cardio%20machines%2C%20professional%20workout%20environment&width=400&height=300&seq=14&orientation=landscape" alt="Fitness" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-semibold text-gray-800">Fitness</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">About Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Learn about our mission to promote fitness and sports excellence.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+                <div class="w-full md:w-1/3">
+                    <div class="rounded-full overflow-hidden shadow-lg w-48 h-48 mx-auto">
+                        <img src="images.jpg" alt="Vipin Dev" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Vipin Dev</h3>
+                    <h4 class="text-lg text-primary font-semibold mb-3">Founder, Shiva Ji Sports Complex</h4>
+                    <p class="text-gray-700 mb-4">
+                        Vipin Dev, Founder of Shiva Ji Sports Complex, has dedicated his life to promoting fitness, youth engagement, and holistic sports education. Under his vision, this center offers a wide range of sports and wellness programs for all age groups.
+                    </p>
+                    <p class="text-gray-700">
+                        With over 15 years of experience in sports management and coaching, Vipin has created a facility that combines traditional values with modern training techniques, ensuring that every participant receives the best possible guidance in their chosen activity.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Our Expert Team</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Meet our dedicated coaches and instructors who bring expertise and passion to every session.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20Indian%20male%20yoga%20instructor%20in%20yoga%20pose%2C%20athletic%20build%2C%20calm%20expression%2C%20yoga%20studio%20background%20with%20natural%20light&width=400&height=500&seq=16&orientation=portrait" alt="Rahul Sharma" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-800 text-xl mb-1">Rahul Sharma</h3>
+                        <p class="text-primary font-medium mb-3">Yoga Instructor</p>
+                        <p class="text-gray-600 text-sm">With 10+ years of experience teaching various yoga styles, Rahul specializes in Hatha and Ashtanga yoga for all age groups.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20Indian%20female%20dance%20instructor%20in%20dance%20pose%2C%20athletic%20build%2C%20energetic%20expression%2C%20dance%20studio%20background%20with%20mirrors&width=400&height=500&seq=17&orientation=portrait" alt="Priya Patel" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-800 text-xl mb-1">Priya Patel</h3>
+                        <p class="text-primary font-medium mb-3">Dance Instructor</p>
+                        <p class="text-gray-600 text-sm">A choreographer with expertise in multiple dance forms including Bharatanatyam, Contemporary and Hip-Hop styles.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20Indian%20male%20martial%20arts%20instructor%20in%20karate%20gi%2C%20athletic%20build%2C%20serious%20expression%2C%20martial%20arts%20dojo%20background&width=400&height=500&seq=18&orientation=portrait" alt="Amit Kumar" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-800 text-xl mb-1">Amit Kumar</h3>
+                        <p class="text-primary font-medium mb-3">Karate Coach</p>
+                        <p class="text-gray-600 text-sm">Black belt in Shotokan Karate with international competition experience and specialized training for children.</p>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=professional%20Indian%20female%20physiotherapist%20working%20with%20patient%2C%20professional%20attire%2C%20caring%20expression%2C%20physiotherapy%20clinic%20background%20with%20equipment&width=400&height=500&seq=19&orientation=portrait" alt="Dr. Neha Singh" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-gray-800 text-xl mb-1">Dr. Neha Singh</h3>
+                        <p class="text-primary font-medium mb-3">Physiotherapist</p>
+                        <p class="text-gray-600 text-sm">Specialized in sports injuries and rehabilitation with advanced certification in orthopedic physiotherapy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="vision-mission py-20 relative">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-2">Vision & Mission</h2>
+                <p class="text-gray-200 max-w-2xl mx-auto">Our guiding principles that drive everything we do.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+                <!-- Vision Card -->
+                <div class="w-full md:w-1/2 bg-white bg-opacity-95 rounded-lg shadow-lg p-8">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-eye-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Vision</h3>
+                    <p class="text-gray-700 text-center">
+                        "To create a <span class="text-primary font-semibold">fitter, stronger and mentally empowered</span> generation through sports and holistic wellness."
+                    </p>
+                </div>
+                
+                <!-- Mission Card -->
+                <div class="w-full md:w-1/2 bg-white bg-opacity-95 rounded-lg shadow-lg p-8">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="ri-focus-3-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center">Mission</h3>
+                    <p class="text-gray-700 text-center">
+                        "To provide <span class="text-primary font-semibold">professional sports training</span>, mental and physical coaching, injury rehab, and creative engagement to all age groups."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs & Services Section -->
+    <section id="programs" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Programs & Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive range of sports and wellness programs for all ages and skill levels.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Fitness & Performance -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-heart-pulse-line text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Fitness & Performance</h3>
+                    </div>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span>Physiotherapy & Injury Rehab</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span>Strength & Conditioning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span>Athlete-Specific Gym</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span>Sports Psychology & Mental Coaching</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-check-line text-primary mt-1 mr-2"></i>
+                            <span>Sports Nutrition & Diet Planning</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Racket Sports -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-ping-pong-line text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Racket Sports</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-table-line text-primary mr-2"></i>
+                                <h4 class="font-semibold">Table Tennis (Indoor)</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Professional tables with coaching for beginners to advanced players.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-badminton-line text-primary mr-2"></i>
+                                <h4 class="font-semibold">Open Badminton Court</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Well-maintained courts with proper lighting and equipment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Martial Arts & Combat Sports -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-boxing-line text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Martial Arts & Combat Sports</h3>
+                    </div>
+                    
+                    <div class="flex overflow-x-auto pb-4 gap-4">
+                        <div class="bg-white rounded p-4 shadow-sm min-w-[200px]">
+                            <h4 class="font-semibold mb-2">Karate</h4>
+                            <p class="text-sm text-gray-600">Traditional Japanese martial art focusing on strikes.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded p-4 shadow-sm min-w-[200px]">
+                            <h4 class="font-semibold mb-2">Taekwondo</h4>
+                            <p class="text-sm text-gray-600">Korean martial art emphasizing high kicks and fast techniques.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded p-4 shadow-sm min-w-[200px]">
+                            <h4 class="font-semibold mb-2">Boxing</h4>
+                            <p class="text-sm text-gray-600">Olympic sport focusing on punching techniques and footwork.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded p-4 shadow-sm min-w-[200px]">
+                            <h4 class="font-semibold mb-2">Judo</h4>
+                            <p class="text-sm text-gray-600">Japanese martial art focusing on throws and groundwork.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Programs -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                            <i class="ri-palette-line text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800">Other Programs</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white rounded p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-brush-line text-primary mr-2"></i>
+                                <h4 class="font-semibold">Arts & Craft</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Creative expression through various art forms and crafts for all ages.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded p-4 shadow-sm">
+                            <div class="flex items-center mb-2">
+                                <i class="ri-music-2-line text-primary mr-2"></i>
+                                <h4 class="font-semibold">Dance & Yoga</h4>
+                            </div>
+                            <p class="text-sm text-gray-600">Classes combining movement, rhythm, and mindfulness for holistic wellness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Glimpses of our facilities and activities at Shiva Ji Sports Complex.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=modern%20sports%20complex%20interior%20with%20multiple%20activity%20areas%20visible%2C%20bright%20lighting%2C%20people%20exercising%2C%20professional%20equipment&width=400&height=300&seq=20&orientation=landscape" alt="Facility" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=karate%20class%20with%20students%20in%20white%20uniforms%20practicing%20in%20formation%2C%20instructor%20demonstrating%20moves%2C%20traditional%20dojo%20setting&width=400&height=300&seq=21&orientation=landscape" alt="Karate Class" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=yoga%20session%20with%20participants%20on%20mats%20in%20peaceful%20studio%2C%20instructor%20guiding%20poses%2C%20natural%20light%20from%20windows&width=400&height=300&seq=22&orientation=landscape" alt="Yoga Session" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=table%20tennis%20tournament%20in%20progress%2C%20multiple%20tables%20with%20players%2C%20spectators%20watching%2C%20competitive%20atmosphere&width=400&height=300&seq=23&orientation=landscape" alt="Table Tennis" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=childrens%20art%20class%20with%20kids%20creating%20colorful%20projects%2C%20art%20supplies%20on%20tables%2C%20instructor%20helping%2C%20displayed%20artwork&width=400&height=300&seq=24&orientation=landscape" alt="Art Class" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=boxing%20training%20session%20with%20coach%20and%20student%2C%20focus%20mitts%20practice%2C%20proper%20form%20demonstration%2C%20training%20ring&width=400&height=300&seq=25&orientation=landscape" alt="Boxing Training" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=dance%20performance%20with%20costumed%20dancers%20on%20stage%2C%20choreographed%20routine%2C%20audience%20watching%2C%20professional%20lighting&width=400&height=300&seq=26&orientation=landscape" alt="Dance Performance" class="w-full h-48 object-cover object-top">
+                </div>
+                
+                <div class="rounded overflow-hidden shadow-md">
+                    <img src="https://readdy.ai/api/search-image?query=physiotherapy%20session%20with%20therapist%20working%20with%20athlete%2C%20rehabilitation%20equipment%2C%20professional%20treatment%20room&width=400&height=300&seq=27&orientation=landscape" alt="Physiotherapy" class="w-full h-48 object-cover object-top">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/2 p-8 md:p-12">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Registrations Now Open!</h2>
+                        <p class="text-gray-700 mb-6">Join our community of sports enthusiasts and begin your journey towards fitness and excellence. Limited spots available!</p>
+                        
+                        <div class="mb-6">
+                            <p class="text-gray-700 mb-2">Contact us directly:</p>
+                            <div class="flex items-center mb-2">
+                                <i class="ri-phone-line text-primary mr-2"></i>
+                                <a href="tel:7840086263" class="text-primary font-bold hover:underline">7840086263</a>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="ri-phone-line text-primary mr-2"></i>
+                                <a href="tel:8802145193" class="text-primary font-bold hover:underline">8802145193</a>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="inline-block bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary/90 transition-all whitespace-nowrap">
+                            Register Now
+                        </a>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 bg-gray-100 p-8 md:p-12">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Quick Enquiry Form</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="activity" class="block text-gray-700 mb-2">Interested Activity</label>
+                                <div class="relative">
+                                    <select id="activity" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 appearance-none pr-8" required>
+                                        <option value="">Select an activity</option>
+                                        <option value="yoga">Yoga</option>
+                                        <option value="dance">Dance</option>
+                                        <option value="kabaddi">Kabaddi</option>
+                                        <option value="karate">Karate</option>
+                                        <option value="chess">Chess</option>
+                                        <option value="tabletennis">Table Tennis</option>
+                                        <option value="boxing">Boxing</option>
+                                        <option value="zumba">Zumba</option>
+                                        <option value="arts">Arts & Craft</option>
+                                        <option value="martialarts">Martial Arts</option>
+                                        <option value="physiotherapy">Physiotherapy</option>
+                                        <option value="fitness">Fitness</option>
+                                    </select>
+                                    <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary/90 transition-all whitespace-nowrap">
+                                Submit Enquiry
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Contact Us</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Get in touch with us for any queries or to schedule a visit.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-5xl mx-auto">
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Our Location</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex items-start mb-3">
+                                <i class="ri-map-pin-line text-primary mt-1 mr-2"></i>
+                                <p class="text-gray-700">
+                                    Gaur Enclave C-24 B, Shalimar Garden, Ext. 2, Near Shiv Chowk, Bata Show Room, Sahibabad, Ghaziabad (U.P.) 201005
+                                </p>
+                            </div>
+                            
+                            <div class="flex items-center mb-3">
+                                <i class="ri-phone-line text-primary mr-2"></i>
+                                <div>
+                                    <a href="tel:7840086263" class="text-primary font-bold hover:underline block">7840086263</a>
+                                    <a href="tel:8802145193" class="text-primary font-bold hover:underline block">8802145193</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center mb-3">
+                                <i class="ri-time-line text-primary mr-2"></i>
+                                <p class="text-gray-700">
+                                    Open daily: 6:00 AM - 9:00 PM
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="rounded-lg overflow-hidden shadow-md h-64">
+                            <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="Map" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2">
+                    <div class="bg-gray-50 rounded-lg p-6 shadow-md h-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Send us a Message</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-phone" class="block text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" id="contact-phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="contact-message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="contact-message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 rounded-button font-semibold hover:bg-primary/90 transition-all whitespace-nowrap">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <!-- Contact & Address -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Contact & Address</h4>
+                    <div class="flex items-start mb-3">
+                        <i class="ri-map-pin-line text-primary mt-1 mr-2"></i>
+                        <p class="text-gray-300">
+                            Gaur Enclave C-24 B, Shalimar Garden, Ext. 2, Near Shiv Chowk, Bata Show Room, Sahibabad, Ghaziabad (U.P.) 201005
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                        <i class="ri-phone-line text-primary mr-2"></i>
+                        <div>
+                            <a href="tel:7840086263" class="text-gray-300 hover:text-white block">7840086263</a>
+                            <a href="tel:8802145193" class="text-gray-300 hover:text-white block">8802145193</a>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                        <i class="ri-time-line text-primary mr-2"></i>
+                        <p class="text-gray-300">
+                            Open daily: 6:00 AM - 9:00 PM
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#home" class="text-gray-300 hover:text-white">Home</a>
+                        <a href="#about" class="text-gray-300 hover:text-white">About</a>
+                        <a href="#activities" class="text-gray-300 hover:text-white">Activities</a>
+                        <a href="#team" class="text-gray-300 hover:text-white">Team</a>
+                        <a href="#gallery" class="text-gray-300 hover:text-white">Gallery</a>
+                        <a href="#vision" class="text-gray-300 hover:text-white">Vision & Mission</a>
+                        <a href="#programs" class="text-gray-300 hover:text-white">Programs</a>
+                        <a href="#contact" class="text-gray-300 hover:text-white">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Social & Branding -->
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-all">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="bg-white inline-block px-3 py-2 rounded">
+                            <span class="text-primary font-bold">FIT INDIA</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h5 class="font-semibold mb-3">Subscribe to our Newsletter</h5>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l border-none focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-800 w-full">
+                            <button class="bg-primary text-white px-4 py-2 rounded-r font-medium hover:bg-primary/90 transition-all whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center">
+                <p class="text-gray-400">© 2025 Shiva Ji Sports Complex. All rights reserved.</p>
+            </div>
+        </div>
+        
+        <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all">
+            <i class="ri-arrow-up-line ri-lg"></i>
+        </button>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Back to top button
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('opacity-0', 'invisible');
+                    backToTopButton.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopButton.classList.add('opacity-0', 'invisible');
+                    backToTopButton.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
